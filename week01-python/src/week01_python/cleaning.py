@@ -12,8 +12,11 @@ def find_customer(customers: dict[int, str], customer_id: int) -> str | None:
     """Return the customer's name, or None if the id doesn't exist."""
     return customers.get(customer_id)
 
-def filter_evens(sample: list[int]) -> list:
-    return ([i for i in sample if i%2==0])
+
+def filter_evens(numbers: list[int]) -> list[int]:
+    """Return the even integers from the list"""
+    return ([i for i in numbers if i % 2 == 0])
+
 
 def averages(items: list[float]) -> float | None:
     if not items:         

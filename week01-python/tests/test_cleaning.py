@@ -1,4 +1,4 @@
-from week01_python.cleaning import averages, clean_city, find_customer, total_amount
+from week01_python.cleaning import averages, clean_city, find_customer, total_amount, filter_evens
 
 
 def test_clean_city_trims_and_capitalizes() -> None:
@@ -25,3 +25,10 @@ def test_averages_of_normal_list() -> None:
 
 def test_averages_of_empty_list_is_none() -> None:
     assert averages([]) is None
+
+def test_filter_evens_keeps_only_even_numbers() -> None:
+    assert filter_evens([1, 2, 3, 4]) == [2, 4]
+
+
+def test_filter_evens_remove_odd_numbers() -> None:
+    assert filter_evens([15, 25, 32, 46, 0]) == [32, 46, 0]

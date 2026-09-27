@@ -1,0 +1,19 @@
+[project]
+name = "week01-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "srikanth854", email = "shreekanth854@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+week01-python = "week01_python:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"

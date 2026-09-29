@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: pg-compose
+    environment:
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
